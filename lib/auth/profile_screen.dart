@@ -1120,10 +1120,10 @@ class MapScreenState extends State<ProfilePage> with SingleTickerProviderStateMi
             child: Padding(
               padding: EdgeInsets.only(right: 10.0),
               child: Container(
-                  child: RaisedButton(
+                  child: ElevatedButton(
                 child: Text("Save"),
-                textColor: Colors.white,
-                color: Colors.green,
+                // textColor: Colors.white,
+                // color: Colors.green,
                 onPressed: () {
                   FirebaseFirestore.instance
                       .collection("Users")
@@ -1156,8 +1156,8 @@ class MapScreenState extends State<ProfilePage> with SingleTickerProviderStateMi
                     FocusScope.of(context).requestFocus(FocusNode());
                   });
                 },
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0)),
+                // shape: RoundedRectangleBorder(
+                //     borderRadius: BorderRadius.circular(20.0)),
               )),
             ),
             flex: 2,
@@ -1166,18 +1166,18 @@ class MapScreenState extends State<ProfilePage> with SingleTickerProviderStateMi
             child: Padding(
               padding: EdgeInsets.only(left: 10.0),
               child: Container(
-                  child: RaisedButton(
+                  child: ElevatedButton(
                 child: Text("Cancel"),
-                textColor: Colors.white,
-                color: Colors.red,
+                // textColor: Colors.white,
+                // color: Colors.red,
                 onPressed: () {
                   setState(() {
                     _status = true;
                     FocusScope.of(context).requestFocus(FocusNode());
                   });
                 },
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0)),
+                // shape: RoundedRectangleBorder(
+                //     borderRadius: BorderRadius.circular(20.0)),
               )),
             ),
             flex: 2,

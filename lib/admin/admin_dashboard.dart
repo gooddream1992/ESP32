@@ -208,20 +208,20 @@ class _adminDashboardState extends State<adminDashboard> {
         ],
       ),
       actions: <Widget>[
-        new FlatButton(
+        new ElevatedButton(
           onPressed: () {
             if (_transportNameController.text.isNotEmpty) {
               setTransportIcon(id, _transportNameController.text, "");
             }
           },
-          textColor: Theme.of(context).primaryColor,
+          // textColor: Theme.of(context).primaryColor,
           child: const Text('Save'),
         ),
-        FlatButton(
+        ElevatedButton(
           onPressed: () {
             Navigator.of(context).pop();
           },
-          textColor: Theme.of(context).primaryColor,
+          // textColor: Theme.of(context).primaryColor,
           child: const Text('Close'),
         ),
       ],

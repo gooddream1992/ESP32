@@ -47,64 +47,6 @@ class _NavigationScreenState extends State<NavigationScreen> {
       "https://www.unoreads.com/user_profile_pic/demo-user.png";
   String isUserName = "Name";
 
-  // pickFile() async {
-  //   FilePickerResult? result = await FilePicker.platform.pickFiles();
-  //
-  //   if (result != null) {
-  //     File file = File(result.files.single.path);
-  //
-  //     var bytes = file.readAsBytesSync();
-  //     var excel = Excel.decodeBytes(bytes);
-  //     selectedExcel = excel;
-  //     print(selectedExcel["id"].sheetName);
-  //     Sheet sheet = selectedExcel["Sheet1"];
-  //     sheetName = sheet.sheetName;
-  //
-  //     getList();
-  //   } else {
-  //     // User canceled the picker
-  //   }
-  //   print("The final List of List Length is ${tbleRows.length}");
-  // }
-
-  // getList() async {
-  //   tbleRows.clear();
-  //   //
-  //   print(selectedExcel["Sheet1"].rows.length);
-  //   for (var row in selectedExcel[sheetName].rows) {
-  //     print(row);
-  //     //tbleRows.add(row);
-  //   }
-  //
-  //   setState(() {});
-  // }
-
-  // List itemList = [
-  //   {
-  //     "icon": "assets/images/png/men.png",
-  //   },
-  //   {
-  //     "icon": "assets/images/png/bike.png",
-  //   },
-  //   {
-  //     "icon": "assets/images/jpg/bycycle.png",
-  //   },
-  //   {
-  //     "icon": "assets/images/png/motorcycle.png",
-  //   },
-  //   {
-  //     "icon": "assets/images/png/car.png",
-  //   },
-  //   {
-  //     "icon": "assets/images/png/truck.png",
-  //   },
-  //   {
-  //     "icon": "assets/images/png/train.png",
-  //   },
-  //   {
-  //     "icon": "assets/images/png/boat.png",
-  //   },
-  // ];
   String totalUsers = "";
   List TitleList = [
     {
@@ -126,6 +68,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
 
   List tbleRows = [];
   List transports = [];
+
   getAllTransports() async {
     await FirebaseFirestore.instance
         .collection("Transports")
@@ -138,6 +81,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
       setState(() {});
     });
   }
+
   ///==== Get user Profile =====
   getProfile() {
     FirebaseFirestore.instance
@@ -487,15 +431,16 @@ class _NavigationScreenState extends State<NavigationScreen> {
                 ),
                 Container(
                   height: height * 0.15,
-                 child: PageView.builder(
-                     itemCount: transports.length,
-                     pageSnapping: true,
-                     itemBuilder: (context,pagePosition){
-                       return Container(
-                           margin: EdgeInsets.all(10),
-                           child: Image.network(transports[pagePosition]["image"]));
-                     }),
-                 /* child: CarouselSlider(
+                  child: PageView.builder(
+                      itemCount: transports.length,
+                      pageSnapping: true,
+                      itemBuilder: (context, pagePosition) {
+                        return Container(
+                            margin: EdgeInsets.all(10),
+                            child: Image.network(
+                                transports[pagePosition]["image"]));
+                      }),
+                  /* child: CarouselSlider(
                     items: [
                       //1st Image of Slider
                       Container(
@@ -1022,7 +967,8 @@ class _NavigationScreenState extends State<NavigationScreen> {
                       builder: (context) => ProfilePage(),
                     ));
               },
-            ),  ListTile(
+            ),
+            ListTile(
               leading: Icon(Icons.account_tree_outlined),
               title: Text('Boosted Streets'),
               onTap: () {
