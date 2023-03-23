@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "582111356245",
+    "project_id": "esp32-9dd8c",
+    "storage_bucket": "esp32-9dd8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:582111356245:android:ee772e74af8167b0627bdc",
+        "android_client_info": {
+          "package_name": "com.example.esp_32"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "582111356245-06t38bdce6u0qb9vii0i6na66paibrk0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdnyfYP5EdTNPCn9AoBRmUJotanuDYEV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "582111356245-06t38bdce6u0qb9vii0i6na66paibrk0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
